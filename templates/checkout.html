@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Checkout</h1>
+{% if order %}
+    <form method="post">
+        <p>Total: ${{ order.total_amount }}</p>
+        <button type="submit" class="btn btn-success">Confirm Purchase</button>
+    </form>
+{% else %}
+    <p>No items to checkout.</p>
+{% endif %}
+{% endblock %}
